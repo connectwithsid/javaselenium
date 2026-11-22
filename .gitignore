@@ -1,0 +1,18 @@
+# Maven build files
+target/
+
+# Test execution reports
+test-output/
+
+# Screenshots
+screenshots/
+
+# IDE settings
+.vscode/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+src/test/resources/config/config.properties

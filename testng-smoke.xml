@@ -1,0 +1,52 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="OpenCartCrossBrowserSmokeSuite"
+       parallel="tests"
+       thread-count="2">
+
+    <listeners>
+        <listener class-name="utilities.ExtentTestListener"/>
+    </listeners>
+
+    <!-- Chrome Smoke Tests -->
+    <test name="ChromeSmokeTests">
+        <parameter name="browser" value="chrome"/>
+
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="testcases.BasePageTest"/>
+            <class name="testcases.HomePageTest"/>
+            <class name="testcases.LoginPageTest"/>
+            <class name="testcases.LogoutPageTest"/>
+            <class name="testcases.RegisterPageTest"/>
+            <class name="testcases.SearchPageTest"/>
+        </classes>
+    </test>
+
+    <!-- Edge Smoke Tests -->
+    <test name="EdgeSmokeTests">
+        <parameter name="browser" value="edge"/>
+
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="testcases.BasePageTest"/>
+            <class name="testcases.HomePageTest"/>
+            <class name="testcases.LoginPageTest"/>
+            <class name="testcases.LogoutPageTest"/>
+            <class name="testcases.RegisterPageTest"/>
+            <class name="testcases.SearchPageTest"/>
+        </classes>
+    </test>
+
+</suite>
