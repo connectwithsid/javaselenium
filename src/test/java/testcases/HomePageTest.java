@@ -7,6 +7,7 @@ import base.BaseClass;
 import pages.HomePage;
 
 public class HomePageTest extends BaseClass {
+    // Practising Git commit and push
 
     @Test(groups = {"regression"})
     public void verifyRegisterNavigation() {
